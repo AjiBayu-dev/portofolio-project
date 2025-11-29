@@ -8,6 +8,7 @@ import "animate.css";
 import MainLayout from "./layout/MainLayout";
 import HomePages from "./pages/HomePages";
 import ProjectPage from "./pages/ProjectPage";
+import ProjectDetailPage from "./pages/ProjectDetailPage";
 import AboutPage from "./pages/AboutPage";
 import ErrorPage from "./pages/ErrorPage";
 import ServicePage from "./pages/ServicePage";
@@ -19,6 +20,7 @@ const App = () => {
         <Route path="/" element={<MainLayout />}>
           <Route index element={<HomePages />} />
           <Route path="/projects" element={<ProjectPage />} />
+          <Route path="/projects/:id" element={<ProjectDetailPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/services" element={<ServicePage />} />
           <Route path="*" element={<ErrorPage />} />

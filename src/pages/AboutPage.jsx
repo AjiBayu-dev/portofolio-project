@@ -3,7 +3,7 @@ import Experience from '@/components/Experience';
 
 const AboutPage = () => {
   return (
-    <div className="mt-20 min-h-screen animate__animated animate__fadeInUp animate__faster">
+    <div className="pt-24 min-h-screen animate__animated animate__fadeIn animate__faster overflow-hidden">
       <About />
       <Experience />
     </div>

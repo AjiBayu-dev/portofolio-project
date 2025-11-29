@@ -1,6 +1,5 @@
 import {
   FaGithub,
-  FaBrave,
   FaLaravel,
   FaReact,
   FaVuejs,
@@ -9,96 +8,90 @@ import {
   FaPython,
   FaHtml5,
   FaJs,
+  FaGlobe,
+  FaDatabase,
 } from 'react-icons/fa6';
 import { RiTailwindCssLine } from 'react-icons/ri';
+import { Link } from 'react-router-dom';
 
-const CardProject = (props) => {
-  const { title, shortDesc, techStack, thumbnail, github, publication } = props;
+const techIcons = {
+  Laravel: <FaLaravel className="text-red-500" />,
+  'Vue.js': <FaVuejs className="text-green-500" />,
+  React: <FaReact className="text-blue-400" />,
+  Bootstrap: <FaBootstrap className="text-purple-600" />,
+  Wordpress: <FaWordpress className="text-blue-600" />,
+  Python: <FaPython className="text-yellow-400" />,
+  Html: <FaHtml5 className="text-orange-500" />,
+  JavaScript: <FaJs className="text-yellow-300" />,
+  Tailwind: <RiTailwindCssLine className="text-cyan-400" />,
+  MySQL: <FaDatabase className="text-blue-600" />,
+};
+
+const CardProject = ({ id, title, shortDesc, techStack, thumbnail, github, publication }) => {
   return (
-    <div className="border-[1px] rounded-sm border-slate-500 md:w-[30%] overflow-hidden p-3 hover:scale-105 hover:transition-transform">
-      <h4 className="font-extrabold">{title}</h4>
-      <p className="text-sm my-2">{shortDesc}</p>
-      <div className="text-2xl md:text-xl my-3 flex gap-3">
-        {Array.isArray(techStack) ? (
-          techStack.map((tech, index) => {
-            if (tech === 'Laravel') {
-              return (
-                <a href="https://laravel.com/" key={index}>
-                  <FaLaravel />
-                </a>
-              );
-            }
-            if (tech === 'Vue.js') {
-              return (
-                <a href="https://vuejs.org/" key={index}>
-                  <FaVuejs />
-                </a>
-              );
-            }
-            if (tech === 'Wordpress') {
-              return (
-                <a href="https://wordpress.com/" key={index}>
-                  <FaWordpress />
-                </a>
-              );
-            }
-            if (tech === 'Python') {
-              return (
-                <a href="https://www.python.org/" key={index}>
-                  <FaPython />
-                </a>
-              );
-            }
-            if (tech === 'Bootstrap') {
-              return (
-                <a href="https://getbootstrap.com/" key={index}>
-                  <FaBootstrap />
-                </a>
-              );
-            }
-            if (tech === 'Html') {
-              return (
-                <a href="https://en.wikipedia.org/wiki/HTML" key={index}>
-                  <FaHtml5 />
-                </a>
-              );
-            }
-            if (tech === 'JavaScript') {
-              return (
-                <a
-                  href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-                  key={index}>
-                  <FaJs />
-                </a>
-              );
-            }
-            if (tech === 'React') {
-              return (
-                <a href="https://react.dev/" key={index}>
-                  <FaReact />
-                </a>
-              );
-            }
-            if (tech === 'Tailwind') {
-              return (
-                <a href="https://tailwindcss.com/" key={index}>
-                  <RiTailwindCssLine />
-                </a>
-              );
-            }
-          })
-        ) : (
-          <a className="text-sm">no tech</a>
-        )}
-      </div>
-      <img className="mt-2 rounded-sm" src={thumbnail} alt={title} />
-      <div className="text-2xl md:text-xl mt-3 flex gap-3">
-        <a href={github}>
-          <FaGithub />
-        </a>
-        <a href={publication}>
-          <FaBrave />
-        </a>
+    <div className="group relative flex flex-col bg-slate-900/50 backdrop-blur-sm border border-slate-800 rounded-2xl overflow-hidden hover:border-slate-600 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/10 hover:-translate-y-1">
+      
+      {/* Image Container */}
+      <Link to={`/projects/${id}`} className="relative aspect-video overflow-hidden block">
+        <div className="absolute inset-0 bg-slate-900/20 group-hover:bg-transparent transition-colors z-10" />
+        <img 
+          className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" 
+          src={thumbnail} 
+          alt={title} 
+        />
+      </Link>
+
+      {/* Content */}
+      <div className="flex flex-col flex-1 p-6">
+        <Link to={`/projects/${id}`}>
+          <h4 className="text-xl font-bold text-slate-100 mb-2 group-hover:text-blue-400 transition-colors">
+            {title}
+          </h4>
+        </Link>
+        
+        <p className="text-slate-400 text-sm leading-relaxed mb-6 flex-1">
+          {shortDesc}
+        </p>
+
+        {/* Tech Stack */}
+        <div className="flex flex-wrap gap-3 mb-6">
+          {Array.isArray(techStack) && techStack.map((tech, index) => (
+            <div 
+              key={index} 
+              className="text-xl hover:scale-110 transition-transform"
+              title={tech}
+            >
+              {techIcons[tech] || <span className="text-xs text-slate-500">{tech}</span>}
+            </div>
+          ))}
+        </div>
+
+        {/* Links */}
+        <div className="flex items-center gap-4 mt-auto pt-4 border-t border-slate-800">
+          {github !== '-' && (
+            <a 
+              href={github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-sm font-medium text-slate-400 hover:text-white transition-colors"
+            >
+              <FaGithub className="text-lg" />
+              <span>Source</span>
+            </a>
+          )}
+          
+          {publication !== '-' && (
+            <a 
+              href={publication}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-sm font-medium text-slate-400 hover:text-blue-400 transition-colors ml-auto"
+            >
+              <FaGlobe className="text-lg" />
+              <span>Live Demo</span>
+            </a>
+          )}
+        </div>
       </div>
     </div>
   );

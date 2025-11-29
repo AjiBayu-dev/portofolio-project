@@ -1,8 +1,42 @@
 [
   {
     "id": "1",
+    "title": "SMANSA Parti - AI Smart School Assistant",
+    "shortDesc": "Sistem informasi sekolah berbasis web yang dilengkapi dengan Virtual Assistant (Chatbot) cerdas untuk layanan informasi 24 jam.",
+    "fullDesc": "Platform digital yang dirancang untuk SMA Negeri 1 Pati (SMANSA) guna mempermudah akses informasi bagi siswa dan wali murid. Fitur utamanya adalah Chatbot berbasis AI yang mampu menjawab pertanyaan seputar sekolah secara otomatis. Dilengkapi dashboard Admin untuk melatih 'Knowledge Base' bot, serta akses khusus Kepala Sekolah untuk monitoring aktivitas informasi.",
+    "challenge": "Tantangan terbesar adalah implementasi algoritma LSTM (Long Short-Term Memory) sebagai teknologi baru yang diadopsi. Dalam prosesnya, ditemukan kendala bahwa LSTM murni hanya efektif untuk klasifikasi 'intent' (maksud pertanyaan), namun kurang mampu menyusun kalimat jawaban yang natural dan luwes selayaknya percakapan manusia.",
+    "solution": "Mengembangkan backend hybrid: LSTM untuk deteksi intent dan NLP untuk pemrosesan teks natural. Dari sisi antarmuka, saya menggunakan Vue.js (SPA) baik untuk Landing Page maupun Dashboard Admin, menciptakan pengalaman chat yang real-time, interaktif, dan mulus tanpa reload halaman.",
+    "result": "Terciptanya layanan informasi sekolah yang interaktif, mengurangi beban admin sekolah dalam menjawab pertanyaan berulang, dan memberikan pengalaman akses informasi yang modern.",
+    "techStack": ["Laravel", "Vue.js", "Python", "MySQL"],
+    "image": "project/smansa-chatbot.png",
+    "link": {
+      "github": "#",
+      "publication": "https://smansaparti.my.id/"
+    }
+  },
+  {
+    "id": "2",
+    "title": "BeeMart - Enterprise POS & Inventory System",
+    "shortDesc": "Sistem manajemen inventaris dan Point of Sales (POS) terintegrasi untuk operasional bisnis multi-outlet dan supplier.",
+    "fullDesc": "Aplikasi web berbasis B2B yang dikembangkan khusus untuk kebutuhan perusahaan dalam mendigitalisasi operasional harian. Sistem ini mencakup manajemen stok yang komprehensif, pencatatan transaksi keuangan, ekspor laporan otomatis, serta pemantauan status order logistik antara Outlet dan Supplier dalam satu ekosistem terpusat.",
+    "challenge": "Tantangan utama adalah menciptakan sinkronisasi data real-time antara tiga role pengguna (Admin, Supplier, Outlet) yang saling ketergantungan. Selain itu, pengembangan fitur 'Stock Opname' yang kompleks memerlukan logika validasi yang ketat untuk memastikan akurasi data fisik vs data sistem.",
+    "solution": "Merancang struktur database relasional yang kompleks untuk memetakan alur bisnis custom. Menggunakan Laravel sebagai backend yang robust untuk menangani logika transaksi yang berat, serta Vue.js di frontend untuk pengalaman pengguna yang responsif dan interaktif tanpa reload halaman yang berlebihan.",
+    "result": "Sistem berhasil diimplementasikan untuk memangkas waktu administrasi, meminimalisir selisih stok (human error) lewat fitur opname digital, dan memberikan transparansi data pesanan secara real-time.",
+    "techStack": ["Laravel", "Vue.js", "MySQL"],
+    "image": "project/beemart-dashboard.png",
+    "link": {
+      "github": "#", 
+      "publication": "#"
+    }
+  },
+  {
+    "id": "3",
     "title": "Portofolio Web",
     "shortDesc": "Portofolio web pribadi menampilkan keterampilan dalam React dan Tailwind, disertai proyek-proyek unggulan.",
+    "fullDesc": "Website portofolio pribadi yang dirancang untuk menampilkan identitas profesional, keterampilan, dan proyek-proyek unggulan saya. Dibangun dengan fokus pada performa, estetika modern, dan pengalaman pengguna yang mulus.",
+    "challenge": "Menciptakan desain yang unik dan personal namun tetap profesional, serta memastikan website responsif di berbagai perangkat.",
+    "solution": "Menggunakan React untuk struktur komponen yang modular dan Tailwind CSS untuk styling yang cepat dan konsisten. Implementasi animasi halus dengan Framer Motion untuk menambah kesan premium.",
+    "result": "Website portofolio yang cepat, responsif, dan berhasil menarik perhatian klien potensial serta rekruter.",
     "techStack": ["React", "Tailwind"],
     "image": "project/portofolio.webp",
     "link": {
@@ -11,9 +45,13 @@
     }
   },
   {
-    "id": "2",
+    "id": "4",
     "title": "E-Mufassir",
     "shortDesc": "e-Mufassir adalah web asisten Muslim, membantu pengguna menemukan informasi tentang Al-Quran, Hadits, dan Fiqih.",
+    "fullDesc": "Platform komprehensif yang menyediakan akses mudah ke sumber-sumber Islam terpercaya. Mencakup fitur pencarian ayat, tafsir, hadits, dan artikel fiqih.",
+    "challenge": "Mengintegrasikan berbagai sumber data (API Al-Quran, Hadits) dan menyajikannya dalam antarmuka yang mudah dipahami oleh pengguna awam.",
+    "solution": "Membangun backend yang kuat dengan Laravel untuk manajemen data dan frontend Vue.js untuk interaksi yang responsif. Menggunakan Python untuk pemrosesan data teks arab.",
+    "result": "Platform yang membantu ribuan pengguna mempelajari Islam dengan lebih mudah dan terstruktur.",
     "techStack": ["Laravel", "Wordpress", "Bootstrap", "Vue.js", "Python"],
     "image": "project/emufassir.webp",
     "link": {
@@ -22,9 +60,13 @@
     }
   },
   {
-    "id": "3",
+    "id": "5",
     "title": "Chatbot E-Mufassir",
     "shortDesc": "Chatbot ini merupakan hasil skripsi kuliah saya, yang dirancang untuk menemukan informasi tentang isi Tafsir Al-Azhar.",
+    "fullDesc": "Asisten virtual berbasis AI yang memungkinkan pengguna bertanya tentang tafsir Al-Azhar menggunakan bahasa alami. Proyek ini merupakan bagian dari penelitian skripsi saya.",
+    "challenge": "Memproses pertanyaan bahasa alami (NLP) dan mencocokkannya dengan konten tafsir yang relevan secara akurat.",
+    "solution": "Mengembangkan model NLP menggunakan Python dan mengintegrasikannya dengan platform Telegram Bot API. Backend Laravel digunakan sebagai webhook handler.",
+    "result": "Chatbot yang mampu menjawab pertanyaan seputar tafsir dengan akurasi yang baik, memudahkan akses ilmu tafsir bagi generasi muda.",
     "techStack": ["Laravel", "Python"],
     "image":"project/chatbot.webp",
     "link": {
@@ -33,9 +75,13 @@
     }
   },
   {
-    "id": "4",
+    "id": "6",
     "title": "Landing Page Desa Umbul Limus",
     "shortDesc": "Landing Page ini dibuat untuk memperkenalkan keindahan dan adat Desa Umbul Limus, Pesawaran, Lampung.",
+    "fullDesc": "Website promosi pariwisata dan budaya untuk Desa Umbul Limus. Menampilkan galeri foto, informasi adat, dan potensi wisata desa.",
+    "challenge": "Menampilkan visual desa yang menarik dan memastikan informasi mudah diakses oleh wisatawan potensial.",
+    "solution": "Desain visual-centric dengan galeri foto berkualitas tinggi dan layout yang bersih menggunakan Bootstrap dan Vue.js.",
+    "result": "Meningkatkan awareness tentang potensi wisata Desa Umbul Limus dan memudahkan akses informasi bagi pengunjung.",
     "techStack": ["Vue.js", "Bootstrap"],
     "image": "project/landingUbl.webp",
     "link": {
@@ -44,9 +90,13 @@
     }
   },
   {
-    "id": "5",
+    "id": "7",
     "title": "Landing Page FDK Uin Suska Riau",
     "shortDesc": "Website ini merupakan website yang saya ajukan untuk mengikuti Lomba Pembuatan Website Fakultas Dakwah dan Komunikasi Islam.",
+    "fullDesc": "Konsep website fakultas yang modern dan informatif, dirancang untuk kebutuhan akademik dan informasi publik.",
+    "challenge": "Menyusun informasi akademik yang padat menjadi tampilan yang rapi dan mudah dinavigasi.",
+    "solution": "Menggunakan struktur navigasi yang jelas dan komponen Bootstrap untuk layout yang responsif dan terorganisir.",
+    "result": "Meraih apresiasi dalam lomba desain website fakultas.",
     "techStack": ["Html", "Bootstrap", "JavaScript"],
     "image": "project/landingFdk.webp",
     "link": {
@@ -55,9 +105,13 @@
     }
   },
   {
-    "id": "6",
+    "id": "8",
     "title": "SIM Student SMAN 5 Tapung",
     "shortDesc": "Website ini dibuat untuk melakukan pencatatan atau pendataan siswa yang ada di SMAN 5 Tapung.",
+    "fullDesc": "Sistem Informasi Manajemen (SIM) untuk pengelolaan data siswa, termasuk biodata, nilai, dan presensi.",
+    "challenge": "Menggantikan sistem pencatatan manual yang rentan kesalahan dan lambat.",
+    "solution": "Membangun sistem berbasis web dengan Laravel yang memungkinkan CRUD data siswa secara efisien dan aman.",
+    "result": "Mempercepat proses administrasi sekolah dan meningkatkan akurasi data siswa.",
     "techStack": ["Laravel", "Bootstrap"],
     "image": "project/SimStudent.webp",
     "link": {
@@ -66,9 +120,13 @@
     }
   },
   {
-    "id": "7",
+    "id": "9",
     "title": "SIM Data Tanah",
     "shortDesc": "Situs web ini dibuat pada saat mata kuliah RPLBO, untunk menangani kasus data tanah dan aktivitas mafia tanah.",
+    "fullDesc": "Sistem informasi untuk transparansi data kepemilikan tanah, bertujuan meminimalisir sengketa dan praktik mafia tanah.",
+    "challenge": "Merancang database yang aman dan sistem verifikasi data yang handal.",
+    "solution": "Implementasi sistem validasi data yang ketat dan role-based access control menggunakan Laravel.",
+    "result": "Prototipe sistem yang efektif untuk pengelolaan data pertanahan yang transparan.",
     "techStack": ["Laravel", "Bootstrap"],
     "image": "project/SimTanah.webp",
     "link": {
