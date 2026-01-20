@@ -2,15 +2,9 @@ import { Briefcase, Calendar, Building2 } from "lucide-react";
 
 const experiences = [
   {
-    role: "Team Lead Development",
-    company: "PT Dazo Kreatif Indonesia",
-    period: "Mei 2025 - Now",
-    type: "Full-time",
-  },
-  {
     role: "Full-stack Developer",
     company: "PT Dazo Kreatif Indonesia",
-    period: "Oct 2024 - Mei 2025",
+    period: "Oct 2024 - Now",
     type: "Full-time",
   },
   {
