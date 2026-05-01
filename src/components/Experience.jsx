@@ -2,9 +2,21 @@ import { Briefcase, Calendar, Building2 } from "lucide-react";
 
 const experiences = [
   {
+    role: "Application Develper Jr",
+    company: "BNI (Bank Negara Indonesia)",
+    period: "Mar 2026 - Now",
+    type: "Full-time",
+  },
+  {
+    role: "Application Develper Jr",
+    company: "PT Mitra Integrasi Informatika",
+    period: "Mar 2026 - Now",
+    type: "Full-time",
+  },
+  {
     role: "Full-stack Developer",
     company: "PT Dazo Kreatif Indonesia",
-    period: "Oct 2024 - Now",
+    period: "Oct 2024 - Feb 2026",
     type: "Full-time",
   },
   {
