@@ -2,10 +2,12 @@ import { NavLink } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import DotPattern from "@/components/magicui/dot-pattern";
 import Button from "@/components/Button";
-import { FaReact, FaLaravel, FaVuejs, FaUbuntu, FaGitAlt } from "react-icons/fa6";
+import { FaReact, FaLaravel, FaVuejs, FaUbuntu } from "react-icons/fa6";
 import Foto from "@/assets/image/foto.webp";
+import { useLanguage } from "@/context/LanguageContext";
 
 const HomePages = () => {
+  const { t } = useLanguage();
   return (
     <div className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 pb-10 px-6">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center z-10">
@@ -13,29 +15,30 @@ const HomePages = () => {
         {/* Left Column: Text Content */}
         <div className="text-center md:text-left space-y-6 animate__animated animate__fadeInLeft">
           <div className="inline-block px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-2">
-            👋 Welcome to my portfolio
+            {t("home.welcome")}
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-slate-200 leading-tight">
-            Hi, I'm <br />
+            {t("home.hi")} <br />
             <span className="bg-gradient-to-r from-blue-400 via-teal-400 to-slate-200 text-transparent bg-clip-text">
-              Aji Bayu Permadi
+              {t("home.name")}
             </span>
           </h1>
           
-          <p className="text-lg md:text-xl text-slate-400 max-w-lg mx-auto md:mx-0 leading-relaxed">
-            A passionate <span className="text-slate-200 font-semibold">Full Stack Developer</span> crafting modern, responsive, and user-friendly web applications.
-          </p>
+          <p
+            className="text-lg md:text-xl text-slate-400 max-w-lg mx-auto md:mx-0 leading-relaxed"
+            dangerouslySetInnerHTML={{ __html: t("home.subtitle") }}
+          />
           
           <div className="flex flex-wrap gap-4 justify-center md:justify-start pt-4">
             <NavLink to="/projects">
               <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full shadow-lg shadow-blue-500/25 transition-all hover:-translate-y-1">
-                View Projects
+                {t("home.viewProjects")}
               </Button>
             </NavLink>
             <NavLink to="/about">
               <Button className="bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 px-8 py-3 rounded-full transition-all hover:-translate-y-1">
-                About Me
+                {t("home.aboutMe")}
               </Button>
             </NavLink>
           </div>

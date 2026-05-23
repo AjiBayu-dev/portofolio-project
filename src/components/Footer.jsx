@@ -1,7 +1,9 @@
 import { FaGithub, FaInstagram, FaLinkedin, FaEnvelope } from "react-icons/fa6";
+import { useLanguage } from "@/context/LanguageContext";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const { t } = useLanguage();
 
   return (
     <footer className="mt-20 border-t border-slate-800 bg-slate-900/20 backdrop-blur-sm">
@@ -11,7 +13,7 @@ const Footer = () => {
         <div className="text-center md:text-left">
           <h3 className="text-lg font-bold text-slate-200 mb-1">Aji Bayu Permadi</h3>
           <p className="text-slate-500 text-sm">
-            © {currentYear} All rights reserved. Built with React & Tailwind.
+            {t("footer.copyright", { year: currentYear })}
           </p>
         </div>
 

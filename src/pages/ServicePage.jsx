@@ -2,19 +2,21 @@ import { FaBullhorn, FaWhatsapp } from "react-icons/fa6";
 import DotPattern from "@/components/magicui/dot-pattern";
 import { cn } from "@/lib/utils";
 import PricingSection from "@/components/PricingSection";
+import { useLanguage } from "@/context/LanguageContext";
 
 const ServicePage = () => {
+  const { t } = useLanguage();
+
   return (
     <div className="min-h-screen pt-20 px-5 md:px-20 flex flex-col gap-10 justify-center items-center animate__animated animate__fadeInUp animate__faster relative overflow-hidden">
       
       {/* Hero Section */}
       <div className="text-center max-w-3xl z-10">
         <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-slate-200 to-slate-500 text-transparent bg-clip-text mb-6">
-          Web Development
+          {t("services.title")}
         </h1>
         <p className="text-slate-400 text-lg md:text-xl leading-relaxed mb-8">
-          Building fast, responsive, and scalable web applications tailored to your business needs. 
-          From simple landing pages to complex enterprise solutions, I bring your vision to life with modern technology.
+          {t("services.subtitle")}
         </p>
         
         <a 
@@ -24,7 +26,7 @@ const ServicePage = () => {
           className="inline-flex items-center gap-2 px-8 py-3 bg-green-600 hover:bg-green-700 text-white rounded-full font-bold transition-all shadow-lg shadow-green-500/25 hover:-translate-y-1"
         >
           <FaWhatsapp className="text-xl" />
-          Chat on WhatsApp
+          {t("services.chatWhatsapp")}
         </a>
       </div>
 
@@ -37,31 +39,31 @@ const ServicePage = () => {
             <div className="p-3 bg-blue-500/10 rounded-lg">
               <FaBullhorn className="text-2xl text-blue-400" />
             </div>
-            <h3 className="text-2xl font-bold text-slate-200">What I Offer</h3>
+            <h3 className="text-2xl font-bold text-slate-200">{t("services.whatIOffer")}</h3>
           </div>
           <ul className="space-y-4 text-slate-400">
             <li className="flex items-start gap-3">
               <span className="mt-1.5 w-2 h-2 bg-blue-400 rounded-full" />
-              <span><strong className="text-slate-300">Responsive Design:</strong> Mobile-first approach ensuring your site looks perfect on all devices.</span>
+              <span dangerouslySetInnerHTML={{ __html: t("services.features.responsive") }} />
             </li>
             <li className="flex items-start gap-3">
               <span className="mt-1.5 w-2 h-2 bg-blue-400 rounded-full" />
-              <span><strong className="text-slate-300">Modern Frontend:</strong> Built with React or Vue, Vite, and Tailwind CSS for lightning-fast performance.</span>
+              <span dangerouslySetInnerHTML={{ __html: t("services.features.frontend") }} />
             </li>
             <li className="flex items-start gap-3">
               <span className="mt-1.5 w-2 h-2 bg-blue-400 rounded-full" />
-              <span><strong className="text-slate-300">SEO Optimized:</strong> Clean code structure and best practices to help you rank higher.</span>
+              <span dangerouslySetInnerHTML={{ __html: t("services.features.seo") }} />
             </li>
             <li className="flex items-start gap-3">
               <span className="mt-1.5 w-2 h-2 bg-blue-400 rounded-full" />
-              <span><strong className="text-slate-300">Interactive UI:</strong> Engaging user experiences with smooth animations and transitions.</span>
+              <span dangerouslySetInnerHTML={{ __html: t("services.features.ui") }} />
             </li>
           </ul>
         </div>
 
         {/* Tech Stack Preview */}
         <div className="bg-slate-900/50 backdrop-blur-sm border border-slate-800 p-8 rounded-2xl hover:border-slate-700 transition-colors flex flex-col justify-center">
-           <h3 className="text-2xl font-bold text-slate-200 mb-6">Technologies</h3>
+           <h3 className="text-2xl font-bold text-slate-200 mb-6">{t("services.technologies")}</h3>
            <div className="flex flex-wrap gap-4">
               <span className="px-4 py-2 bg-slate-800 rounded-full text-slate-300 text-sm font-medium border border-slate-700">Laravel</span>
               <span className="px-4 py-2 bg-slate-800 rounded-full text-slate-300 text-sm font-medium border border-slate-700">Vue</span>
@@ -75,7 +77,7 @@ const ServicePage = () => {
            </div>
            <div className="mt-8 pt-6 border-t border-slate-800">
               <p className="text-slate-400 italic">
-                "I don't just write code; I build solutions that solve real-world problems."
+                {t("services.quote")}
               </p>
            </div>
         </div>

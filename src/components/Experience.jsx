@@ -1,4 +1,5 @@
 import { Briefcase, Calendar, Building2 } from "lucide-react";
+import { useLanguage } from "@/context/LanguageContext";
 
 const experiences = [
   {
@@ -40,14 +41,16 @@ const experiences = [
 ];
 
 const Experience = () => {
+  const { t } = useLanguage();
+
   return (
     <div className="max-w-7xl mx-auto px-6 py-16">
       <div className="mb-12">
         <h5 className="text-sm font-bold tracking-wider text-blue-500 uppercase mb-2">
-          Perjalanan Karir
+          {t("experience.title")}
         </h5>
         <h2 className="text-3xl md:text-4xl font-bold text-slate-200">
-          Experience
+          {t("experience.heading")}
         </h2>
       </div>
 

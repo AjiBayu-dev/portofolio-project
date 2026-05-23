@@ -1,0 +1,203 @@
+{
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "about": "About",
+    "services": "Services"
+  },
+  "home": {
+    "welcome": "👋 Welcome to my portfolio",
+    "hi": "Hi, I'm",
+    "name": "Aji Bayu Permadi",
+    "subtitle": "A passionate <span>Full Stack Developer</span> crafting modern, responsive, and user-friendly web applications.",
+    "viewProjects": "View Projects",
+    "aboutMe": "About Me"
+  },
+  "about": {
+    "title": "About Me",
+    "name": "Aji Bayu Permadi",
+    "bio1": "<span>Web Developer</span> specializing in building modern, functional, responsive, and aesthetic web applications. Deep expertise in Frontend using the <span>React & Vue</span> ecosystem, as well as Backend with <span>Laravel</span>.",
+    "bio2": "Focused on writing clean and efficient code to solve complex problems. Always adaptive to the latest technology trends to deliver optimal digital solutions.",
+    "bio3": "Currently open for job opportunities, contracts, and professional collaborations. Let's connect to discuss how I can help bring your digital ideas to life.",
+    "downloadCv": "Download CV",
+    "contactMe": "Contact Me",
+    "techStack": "Tech Stack"
+  },
+  "experience": {
+    "title": "Career Journey",
+    "heading": "Experience"
+  },
+  "projects": {
+    "title": "My Portfolio",
+    "heading": "Featured Projects",
+    "noProjects": "No Projects Found",
+    "source": "Source",
+    "liveDemo": "Live Demo",
+    "backToProjects": "Back to Projects",
+    "overview": "Overview",
+    "challenge": "The Challenge",
+    "solution": "The Solution",
+    "keyResults": "Key Results",
+    "technologies": "Technologies",
+    "projectLinks": "Project Links",
+    "viewCode": "View Code"
+  },
+  "services": {
+    "title": "Web Development",
+    "subtitle": "Building fast, responsive, and scalable web applications tailored to your business needs. From simple landing pages to complex enterprise solutions, I bring your vision to life with modern technology.",
+    "chatWhatsapp": "Chat on WhatsApp",
+    "whatIOffer": "What I Offer",
+    "features": {
+      "responsive": "<strong>Responsive Design:</strong> Mobile-first approach ensuring your site looks perfect on all devices.",
+      "frontend": "<strong>Modern Frontend:</strong> Built with React or Vue, Vite, and Tailwind CSS for lightning-fast performance.",
+      "seo": "<strong>SEO Optimized:</strong> Clean code structure and best practices to help you rank higher.",
+      "ui": "<strong>Interactive UI:</strong> Engaging user experiences with smooth animations and transitions."
+    },
+    "technologies": "Technologies",
+    "quote": "\"I don't just write code; I build solutions that solve real-world problems.\""
+  },
+  "pricing": {
+    "title": "Website Package Options",
+    "subtitle": "Choose a package that fits your business needs. Transparent, professional, and high-quality.",
+    "badge": "🔥 Best Seller",
+    "packages": {
+      "landing": {
+        "name": "Landing Page",
+        "price": "Rp 1,500,000",
+        "desc": "Perfect for product promotion, sales, or personal branding.",
+        "features": [
+          "Modern & Mobile Friendly Design",
+          "Includes Domain & Hosting (1 Year)",
+          "Floating WhatsApp Button",
+          "Google Search Optimization",
+          "Premium Server Speed",
+          "Design Revisions 2x",
+          "Completion: 3-5 Days"
+        ],
+        "button": "Choose This Package"
+      },
+      "company": {
+        "name": "Company Profile",
+        "price": "Rp 3,000,000",
+        "desc": "Perfect for building trust & company credibility.",
+        "features": [
+          "All Landing Page Features",
+          "Up to 5-7 Website Pages",
+          "Admin Panel (Edit Yourself)",
+          "3 Business Email Accounts",
+          "Google Maps Integration",
+          "Video Tutorial Guide",
+          "Free 3 Months Maintenance",
+          "Completion: 7-14 Days"
+        ],
+        "button": "Choose This Package"
+      },
+      "custom": {
+        "name": "Custom Web App",
+        "price": "Start from Rp 8,000,000",
+        "desc": "Complex system solutions for business operations.",
+        "features": [
+          "Custom System & Features",
+          "Complex Database Integration",
+          "Member Login / User Dashboard",
+          "Full Source Code Ownership",
+          "VPS / Private Cloud Server Setup",
+          "Priority Technical Support",
+          "Completion: 1 Month+"
+        ],
+        "button": "Free Consultation"
+      }
+    },
+    "addon": {
+      "heading": "🔥 Make Your Website Smarter?",
+      "desc": "Transform your business with <strong>Artificial Intelligence (AI)</strong>. Make AI your Customer Service that serves customers 24/7, or a smart assistant for system automation. Save operational costs and increase customer satisfaction.",
+      "package": "AI Integration Add-on Package",
+      "price": "Start from Rp 1,000,000"
+    }
+  },
+  "cta": {
+    "heading": "Ready to start your project?",
+    "subtitle": "Let's collaborate to turn your ideas into reality. I'm available for freelance projects and open to new opportunities.",
+    "button": "Let's Chat"
+  },
+  "footer": {
+    "copyright": "© {year} All rights reserved. Built with React & Tailwind."
+  },
+  "error": {
+    "title": "Not Found Page"
+  },
+  "projectsData": {
+    "1": {
+      "title": "SMANSA Parti - AI Smart School Assistant",
+      "shortDesc": "Web-based school information system equipped with an intelligent Virtual Assistant (Chatbot) for 24-hour information services.",
+      "fullDesc": "A digital platform designed for SMA Negeri 1 Pati (SMANSA) to simplify information access for students and parents. Its main feature is an AI-based Chatbot that can automatically answer questions about the school. Equipped with an Admin dashboard to train the bot's 'Knowledge Base', as well as special access for the Principal to monitor information activity.",
+      "challenge": "The biggest challenge was implementing the LSTM (Long Short-Term Memory) algorithm as a newly adopted technology. During development, it was discovered that pure LSTM is only effective for 'intent' classification, but lacks the ability to construct natural and flexible answer sentences like human conversation.",
+      "solution": "Developed a hybrid backend: LSTM for intent detection and NLP for natural text processing. On the interface side, I used Vue.js (SPA) for both the Landing Page and Admin Dashboard, creating a real-time, interactive, and seamless chat experience without page reloads.",
+      "result": "Created an interactive school information service, reducing the school admin's burden in answering repetitive questions, and providing a modern information access experience."
+    },
+    "2": {
+      "title": "BeeMart - Enterprise POS & Inventory System",
+      "shortDesc": "Integrated inventory management and Point of Sales (POS) system for multi-outlet and supplier business operations.",
+      "fullDesc": "A B2B web application specifically developed for company needs in digitizing daily operations. This system includes comprehensive stock management, financial transaction recording, automatic report export, and logistics order status monitoring between Outlets and Suppliers in one centralized ecosystem.",
+      "challenge": "The main challenge was creating real-time data synchronization between three user roles (Admin, Supplier, Outlet) that are interdependent. Additionally, developing the complex 'Stock Opname' feature required strict validation logic to ensure physical vs system data accuracy.",
+      "solution": "Designed a complex relational database structure to map custom business flows. Used Laravel as a robust backend to handle heavy transaction logic, and Vue.js on the frontend for a responsive and interactive user experience without excessive page reloads.",
+      "result": "The system was successfully implemented to reduce administrative time, minimize stock discrepancies (human error) through digital opname features, and provide real-time order data transparency."
+    },
+    "3": {
+      "title": "Portfolio Website",
+      "shortDesc": "Personal portfolio website showcasing skills in React and Tailwind, along with featured projects.",
+      "fullDesc": "A personal portfolio website designed to showcase professional identity, skills, and featured projects. Built with a focus on performance, modern aesthetics, and seamless user experience.",
+      "challenge": "Creating a unique and personal yet professional design, while ensuring the website is responsive across all devices.",
+      "solution": "Used React for modular component structure and Tailwind CSS for fast and consistent styling. Implemented smooth animations with Framer Motion for a premium feel.",
+      "result": "A fast, responsive portfolio website that successfully attracts potential clients and recruiters."
+    },
+    "4": {
+      "title": "E-Mufassir",
+      "shortDesc": "e-Mufassir is a Muslim assistant web app, helping users find information about the Quran, Hadith, and Fiqh.",
+      "fullDesc": "A comprehensive platform providing easy access to trusted Islamic sources. Includes verse search, tafsir, hadith, and fiqh article features.",
+      "challenge": "Integrating various data sources (Quran API, Hadith) and presenting them in an interface easily understood by general users.",
+      "solution": "Built a strong backend with Laravel for data management and Vue.js frontend for responsive interaction. Used Python for Arabic text data processing.",
+      "result": "A platform that helps thousands of users learn about Islam more easily and in a structured way."
+    },
+    "5": {
+      "title": "Chatbot E-Mufassir",
+      "shortDesc": "This chatbot is the result of my undergraduate thesis, designed to find information about the content of Tafsir Al-Azhar.",
+      "fullDesc": "An AI-based virtual assistant that allows users to ask about Tafsir Al-Azhar using natural language. This project is part of my thesis research.",
+      "challenge": "Processing natural language questions (NLP) and accurately matching them with relevant tafsir content.",
+      "solution": "Developed an NLP model using Python and integrated it with the Telegram Bot API platform. Laravel backend was used as a webhook handler.",
+      "result": "A chatbot capable of answering tafsir-related questions with good accuracy, making tafsir knowledge accessible to the younger generation."
+    },
+    "6": {
+      "title": "Landing Page - Umbul Limus Village",
+      "shortDesc": "This Landing Page was created to introduce the beauty and culture of Umbul Limus Village, Pesawaran, Lampung.",
+      "fullDesc": "Tourism and cultural promotion website for Umbul Limus Village. Displays photo gallery, cultural information, and village tourism potential.",
+      "challenge": "Presenting the village's visual appeal attractively and ensuring information is easily accessible to potential tourists.",
+      "solution": "Visual-centric design with high-quality photo gallery and clean layout using Bootstrap and Vue.js.",
+      "result": "Increased awareness about Umbul Limus Village's tourism potential and facilitated information access for visitors."
+    },
+    "7": {
+      "title": "Landing Page - FDK UIN Suska Riau",
+      "shortDesc": "This website was created for the Faculty of Da'wah and Islamic Communication Website Competition.",
+      "fullDesc": "A modern and informative faculty website concept, designed for academic and public information needs.",
+      "challenge": "Organizing dense academic information into a clean and easily navigable display.",
+      "solution": "Used clear navigation structure and Bootstrap components for a responsive and organized layout.",
+      "result": "Received appreciation in the faculty website design competition."
+    },
+    "8": {
+      "title": "Student MIS - SMAN 5 Tapung",
+      "shortDesc": "This website was created for recording and managing student data at SMAN 5 Tapung.",
+      "fullDesc": "Management Information System (MIS) for student data management, including biodata, grades, and attendance.",
+      "challenge": "Replacing manual recording systems that were error-prone and slow.",
+      "solution": "Built a web-based system with Laravel that enables efficient and secure CRUD student data operations.",
+      "result": "Accelerated school administration processes and improved student data accuracy."
+    },
+    "9": {
+      "title": "Land Data MIS",
+      "shortDesc": "This website was created during the RPLBO course, to handle land data cases and land mafia activities.",
+      "fullDesc": "Information system for land ownership data transparency, aiming to minimize disputes and land mafia practices.",
+      "challenge": "Designing a secure database and reliable data verification system.",
+      "solution": "Implemented strict data validation system and role-based access control using Laravel.",
+      "result": "An effective system prototype for transparent land data management."
+    }
+  }
+}

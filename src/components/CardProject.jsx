@@ -13,6 +13,7 @@ import {
 } from 'react-icons/fa6';
 import { RiTailwindCssLine } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
+import { useLanguage } from '@/context/LanguageContext';
 
 const techIcons = {
   Laravel: <FaLaravel className="text-red-500" />,
@@ -28,6 +29,7 @@ const techIcons = {
 };
 
 const CardProject = ({ id, title, shortDesc, techStack, thumbnail, github, publication }) => {
+  const { t } = useLanguage();
   return (
     <div className="group relative flex flex-col bg-slate-900/50 backdrop-blur-sm border border-slate-800 rounded-2xl overflow-hidden hover:border-slate-600 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/10 hover:-translate-y-1">
       
@@ -76,7 +78,7 @@ const CardProject = ({ id, title, shortDesc, techStack, thumbnail, github, publi
               className="flex items-center gap-2 text-sm font-medium text-slate-400 hover:text-white transition-colors"
             >
               <FaGithub className="text-lg" />
-              <span>Source</span>
+              <span>{t("projects.source")}</span>
             </a>
           )}
           
@@ -88,7 +90,7 @@ const CardProject = ({ id, title, shortDesc, techStack, thumbnail, github, publi
               className="flex items-center gap-2 text-sm font-medium text-slate-400 hover:text-blue-400 transition-colors ml-auto"
             >
               <FaGlobe className="text-lg" />
-              <span>Live Demo</span>
+              <span>{t("projects.liveDemo")}</span>
             </a>
           )}
         </div>
