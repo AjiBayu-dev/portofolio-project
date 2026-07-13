@@ -15,9 +15,15 @@ const experiences = [
     type: "Full-time",
   },
   {
+    role: "Lead Engineer",
+    company: "PT Dazo Kreatif Indonesia",
+    period: "May 2025 - Feb 2026",
+    type: "Full-time",
+  },
+  {
     role: "Full-stack Developer",
     company: "PT Dazo Kreatif Indonesia",
-    period: "Oct 2024 - Feb 2026",
+    period: "Oct 2024 - May 2025",
     type: "Full-time",
   },
   {
