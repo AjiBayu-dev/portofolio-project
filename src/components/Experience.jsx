@@ -3,13 +3,13 @@ import { useLanguage } from "@/context/LanguageContext";
 
 const experiences = [
   {
-    role: "Application Develper Jr",
+    role: "Application Developer Jr",
     company: "BNI (Bank Negara Indonesia)",
     period: "Mar 2026 - Now",
     type: "Full-time",
   },
   {
-    role: "Application Develper Jr",
+    role: "Application Developer Jr",
     company: "PT Mitra Integrasi Informatika",
     period: "Mar 2026 - Now",
     type: "Full-time",
